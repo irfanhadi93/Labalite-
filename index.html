@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Labalite - Hitung Laba Rugi</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Labalite</h1>
+    <p>Hitung laba rugi usahamu secara cepat</p>
+  </header>
+
+  <main>
+    <div class="container">
+      <!-- Form Pemasukan -->
+      <section class="card">
+        <h2>Tambah Pemasukan</h2>
+        <form id="formPemasukan">
+          <input type="text" placeholder="Sumber" id="namaPemasukan">
+          <input type="number" placeholder="Jumlah" id="jumlahPemasukan">
+          <button type="submit">Tambah</button>
+        </form>
+      </section>
+
+      <!-- Form Pengeluaran -->
+      <section class="card">
+        <h2>Tambah Pengeluaran</h2>
+        <form id="formPengeluaran">
+          <input type="text" placeholder="Keperluan" id="namaPengeluaran">
+          <input type="number" placeholder="Jumlah" id="jumlahPengeluaran">
+          <button type="submit">Tambah</button>
+        </form>
+      </section>
+
+      <!-- Ringkasan Laba/Rugi -->
+      <section class="card" id="hasil">
+        <h2>Ringkasan</h2>
+        <div id="ringkasan">
+          <div>Total Pemasukan: <span id="totalPemasukan">0</span></div>
+          <div>Total Pengeluaran: <span id="totalPengeluaran">0</span></div>
+          <div>Laba/Rugi: <span id="labaRugi">0</span></div>
+        </div>
+      </section>
+
+      <!-- Riwayat Transaksi -->
+      <section class="card" id="riwayat">
+        <h2>Riwayat Transaksi</h2>
+        <ul id="riwayatList"></ul>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>Powered by Irfanhadi</p>
+  </footer>
+
+  <!-- Panggil modul -->
+  <script type="module" src="js/utils/formatter.js"></script>
+  <script type="module" src="js/utils/storage.js"></script>
+  <script type="module" src="js/data/pemasukan.js"></script>
+  <script type="module" src="js/data/pengeluaran.js"></script>
+  <script type="module" src="js/core/labaRugi.js"></script>
+  <script type="module" src="js/ui/render.js"></script>
+  <script type="module" src="js/ui/formHandler.js"></script>
+  <script type="module" src="js/ui/riwayat.js"></script>
+</body>
+</html>
